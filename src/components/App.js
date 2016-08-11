@@ -5,7 +5,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='App'>
-        <BodyText>This is body text</BodyText>
+        
       </div>
     )
   }
