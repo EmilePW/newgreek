@@ -4,8 +4,9 @@
 
 export const ADD_GOAL = 'ADD_GOAL'
 export const REMOVE_GOAL = 'REMOVE_GOAL'
+export const TOGGLE_GOAL_COMPLETION = 'TOGGLE_GOAL_COMPLETION'
 export const UPDATE_GOAL = 'UPDATE_GOAL'
-export const SET_VISBILITY_FILTER = 'SET_VISBILITY_FILTER'
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 
 /*
  * Other Constants
@@ -37,6 +38,13 @@ export function removeGoal (index) {
   }
 }
 
+export function toggleGoalCompletion (index) {
+  return {
+    type: TOGGLE_GOAL_COMPLETION,
+    index
+  }
+}
+
 export function updateGoal (text, expectedTime, completed) {
   return {
     type: UPDATE_GOAL,
@@ -48,7 +56,7 @@ export function updateGoal (text, expectedTime, completed) {
 
 export function setVisibilityFilter (filter) {
   return {
-    type: SET_VISBILITY_FILTER,
+    type: SET_VISIBILITY_FILTER,
     filter
   }
 }

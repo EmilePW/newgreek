@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 class BodyText extends React.Component {
   render () {
@@ -11,7 +11,7 @@ class BodyText extends React.Component {
 }
 
 BodyText.propTypes = {
-  children: React.PropTypes.string.isRequired
+  children: PropTypes.string.isRequired
 }
 
 export default BodyText

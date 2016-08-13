@@ -1,6 +1,7 @@
 import {
   ADD_GOAL,
   REMOVE_GOAL,
+  TOGGLE_GOAL_COMPLETION,
   UPDATE_GOAL,
   SET_VISIBILITY_FILTER,
   VisibilityFilters,
@@ -12,23 +13,34 @@ function goals (state = [], action) {
   switch (action.type) {
     case ADD_GOAL:
       return [
-        ...state.goals,
+        ...state,
         {
           text: action.text,
           expectedTime: action.expectedTime,
-          completed: false
+          completed: action.completed
         }
       ]
     case REMOVE_GOAL:
-      return state.goals.filter((goal, index) => index !== action.index)
+      return state.filter((goal, index) => index !== action.index)
+    case TOGGLE_GOAL_COMPLETION:
+      return state.map((goal, index) => {
+        if (index === action.index) {
+          return Object.assign({}, goal, {
+            completed: !goal.completed
+          })
+        } else {
+          return goal
+        }
+      })
     case UPDATE_GOAL:
-      return state.goals.map((goal, index) => {
+      return state.map((goal, index) => {
         if (index === action.index) {
           return Object.assign({}, goal, {
             text: action.text,
-            expectedTime: action.expectedTime,
-            completed: action.completed
+            expectedTime: action.expectedTime
           })
+        } else {
+          return goal
         }
       })
     default:
@@ -46,8 +58,8 @@ function visibilityFilter (state = VisibilityFilters.SHOW_ALL, action) {
 }
 
 const goalsApp = combineReducers({
-  visibilityFilter,
-  goals
+  goals,
+  visibilityFilter
 })
 
 export default goalsApp
