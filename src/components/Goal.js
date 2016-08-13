@@ -4,12 +4,16 @@ import CompletionCheck from './CompletionCheck'
 import ExpectedTime from './ExpectedTime'
 
 class Goal extends React.Component {
+  onCompletionCheckClick () {
+    return this.props.onCompletionCheckClick(this.props.id)
+  }
+
   render () {
     return (
       <div className='Goal'>
         {this.props.text} - 
         <ExpectedTime>{this.props.expectedTime}</ExpectedTime>
-        <CompletionCheck completed={this.props.completed} />
+        <CompletionCheck completed={this.props.completed} onCompletionCheckClick={this.onCompletionCheckClick.bind(this)} />
       </div>
     )
   }

@@ -6,7 +6,7 @@ class GoalList extends React.Component {
   render () {
     let goals = this.props.goals.map((goal) =>
       <GoalListItem key={goal.id}>
-        <Goal text={goal.text} expectedTime={goal.expectedTime} completed={goal.completed} />
+        <Goal id={goal.id} text={goal.text} expectedTime={goal.expectedTime} completed={goal.completed} onCompletionCheckClick={this.props.onCompletionCheckClick} />
       </GoalListItem>)
 
     return (
@@ -23,7 +23,8 @@ GoalList.propTypes = {
     text: PropTypes.string.isRequired,
     expectedTime: PropTypes.number,
     completed: PropTypes.bool.isRequired
-  }).isRequired).isRequired
+  }).isRequired).isRequired,
+  onCompletionCheckClick: PropTypes.func.isRequired
 }
 
 export default GoalList
