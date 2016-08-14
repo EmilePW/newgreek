@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import SectionTitle from './SectionTitle'
 import VisibleGoalList from '../containers/VisibleGoalList'
+import AddGoalSection from '../containers/AddGoalSection'
 
 class GoalSection extends React.Component {
   render () {
@@ -8,6 +9,7 @@ class GoalSection extends React.Component {
       <section className='GoalSection'>
         <SectionTitle>{this.props.title}</SectionTitle>
         <VisibleGoalList />
+        <AddGoalSection />
       </section>
     )
   }

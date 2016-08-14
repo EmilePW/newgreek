@@ -11,6 +11,7 @@ function goals (state = [firstGoal], action) {
       return [
         ...state,
         {
+          id: action.id,
           text: action.text,
           expectedTime: action.expectedTime,
           completed: action.completed

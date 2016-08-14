@@ -6,7 +6,7 @@ class GoalTextInput extends React.Component {
     return (
       <div className='GoalTextInput'>
         <BodyText>What is the goal?</BodyText>
-        <input className='GoalTextInput' type='text' placeholder='Enter Your Goal' />
+        <input type='text' placeholder='Enter Your Goal' />
       </div>
     )
   }

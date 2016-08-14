@@ -22,12 +22,13 @@ export const VisibilityFilters = {
  * Action Creators
  */
 
-export function addGoal (text, expectedTime, completed = false) {
+export function addGoal (goal) {
   return {
     type: ADD_GOAL,
-    text,
-    expectedTime,
-    completed
+    id: Math.round(Math.random() * 10000),
+    text: goal.text,
+    expectedTime: goal.expectedTime,
+    completed: false
   }
 }
 
