@@ -1,9 +1,18 @@
 .GoalTextInput {
-  width: 200px;
+  padding: 0px;
+  text-align: center;
+  width: 60%;
+
+  p {
+    padding: 10px;
+  }
 
   input {
-    height: 25px;
+    border: 1px solid #222;
+    border-radius: 10px;
+    outline: none;
     padding: 5px;
+    text-align: center;
     width: 100%;
   }
 }

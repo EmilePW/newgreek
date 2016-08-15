@@ -5,23 +5,25 @@ import AddGoalButton from './AddGoalButton'
 
 class AddGoal extends React.Component {
   onAddGoal () {
+    let addGoalForm = this.refs.addGoal
     let newGoal = {
-      text: this.refs.addGoal[0].value,
-      expectedTime: Number(this.refs.addGoal[1].value)
+      text: addGoalForm[0].value,
+      expectedTime: Number(addGoalForm[1].value)
     }
 
     if (newGoal.text && typeof newGoal.text === 'string') {
-      this.refs.addGoal[0].className = this.refs.addGoal[0].className.replace(' invalid-input', '')
+      addGoalForm[0].className = addGoalForm[0].className.replace(' invalid-input', '')
 
       if (newGoal.expectedTime && typeof newGoal.expectedTime === 'number') {
-        this.refs.addGoal[1].className = this.refs.addGoal[1].className.replace(' invalid-input', '')
-        this.refs.addGoal.reset()
+        addGoalForm[1].className = addGoalForm[1].className.replace(' invalid-input', '')
+        addGoalForm.reset()
         return this.props.onAddGoal(newGoal)
-      } else {
-        this.refs.addGoal[1].className += ' invalid-input'
+      } else if(!/(invalid-input)/.test(addGoalForm[1].className)) {
+        addGoalForm[1].className += ' invalid-input'
       }
-    } else {
-      this.refs.addGoal[0].className += ' invalid-input'
+    } else if(!/(invalid-input)/.test(addGoalForm[0].className)) {
+
+      addGoalForm[0].className += ' invalid-input'
     }
   }
 

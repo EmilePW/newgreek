@@ -1,8 +1,21 @@
 .GoalExpectedTimeInput {
-  width: 50px;
+  padding: 0 5px;
+  width: 20%;
+
+  p {
+    padding: 20px;
+  }
 
   input {
-    width: 100%;
+    border-bottom: 1px solid #222;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    display: block;
     height: 25px;
+    margin: 0 auto;
+    outline: none;
+    text-align: center;
+    width: 50%;
   }
 }

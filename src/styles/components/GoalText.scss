@@ -1,9 +1,9 @@
 .GoalText {
   background: $goal-incomplete-background-colour;
   border-radius: 10px;
-  height: 30px;
   @include centerChild();
-  width: 300px;
+  padding: 10px;
+  width: 60%;
 }
 
 &.completed {

@@ -1,12 +1,13 @@
 import React from 'react'
 import BodyText from './BodyText'
+import IoClock from 'react-icons/lib/io/clock'
 
 class GoalExpectedTimeInput extends React.Component {
   render () {
     return (
       <div className='GoalExpectedTimeInput'>
-        <BodyText>Expected Time (hours)</BodyText>
-        <input type='number' />
+        <p><IoClock size={20} /> (hours)</p>
+        <input type='text' />
       </div>
     )
   }
