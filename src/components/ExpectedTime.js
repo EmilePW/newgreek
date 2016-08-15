@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
-import BodyText from './BodyText'
+import IoClock from 'react-icons/lib/io/clock'
 
 class ExpectedTime extends React.Component {
   render () {
     return (
-      <span className="ExpectedTime">{this.props.children} hrs.</span>
+      <span className="ExpectedTime"><IoClock size={20} /> {this.props.children} hrs.</span>
     )
   }
 }

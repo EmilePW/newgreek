@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import BodyText from './BodyText'
 import CompletionCheck from './CompletionCheck'
+import GoalText from './GoalText'
 import ExpectedTime from './ExpectedTime'
 
 class Goal extends React.Component {
@@ -9,9 +10,14 @@ class Goal extends React.Component {
   }
 
   render () {
+    let className = 'Goal'
+    if (this.props.completed) {
+      className += ' completed'
+    }
+
     return (
-      <div className='Goal'>
-        {this.props.text} - 
+      <div className={className}>
+        <GoalText>{this.props.text}</GoalText> 
         <ExpectedTime>{this.props.expectedTime}</ExpectedTime>
         <CompletionCheck completed={this.props.completed} onCompletionCheckClick={this.onCompletionCheckClick.bind(this)} />
       </div>

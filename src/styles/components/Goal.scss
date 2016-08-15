@@ -1,6 +1,7 @@
 .Goal {
-  background: $goal-background-colour;
-  border: 1px $new-greek-primary-colour solid;
-  padding: 20px;
-  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 20px;
+  width: 400px;
 }

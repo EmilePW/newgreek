@@ -1,0 +1,5 @@
+.GoalSection {
+  margin: 0 auto;
+  
+  @include responsiveProp(width, 100%, 100%, 60%, 50%);
+}

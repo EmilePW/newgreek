@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700');
 
-$primary-font: 'PT Sans', sans-serif;
+$primary-font: 'Hind', sans-serif;
 
 
 // Typography resets
@@ -16,7 +17,8 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input {
   font-family: $primary-font;
-
+  font-weight: 400;
+  font-size: 13px;
 }

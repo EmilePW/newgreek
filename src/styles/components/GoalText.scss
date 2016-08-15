@@ -1,0 +1,14 @@
+.GoalText {
+  background: $goal-incomplete-background-colour;
+  border-radius: 10px;
+  height: 30px;
+  @include centerChild();
+  width: 300px;
+}
+
+&.completed {
+  .GoalText {
+    background: $goal-complete-background-colour;
+    text-decoration: line-through;
+  }
+}
