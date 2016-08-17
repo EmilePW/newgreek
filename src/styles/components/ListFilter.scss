@@ -1,0 +1,13 @@
+.ListFilter {
+  @include centerChild()
+  padding: 20px;
+
+  select {
+    background: none;
+    border-bottom: 1px solid #222;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+  }
+}
