@@ -7,7 +7,7 @@ const getVisibleGoals = (goals, filter) => {
     case 'SHOW_ALL':
       return goals
     case 'SHOW_COMPLETED':
-      return todos.filter(goal => goal.completed)
+      return goals.filter(goal => goal.completed)
     case 'SHOW_IN_PROGRESS':
       return goals.filter(goal => !goal.completed)
   }

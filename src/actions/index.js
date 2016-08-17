@@ -52,7 +52,7 @@ export function updateGoal (id, text, expectedTime, completed) {
     id,
     text,
     expectedTime,
-    completed 
+    completed
   }
 }
 

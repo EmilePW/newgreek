@@ -1,5 +1,4 @@
 import React from 'react'
-import BodyText from './BodyText'
 import IoClock from 'react-icons/lib/io/clock'
 
 class GoalExpectedTimeInput extends React.Component {

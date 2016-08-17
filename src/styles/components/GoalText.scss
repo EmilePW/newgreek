@@ -1,7 +1,7 @@
 .GoalText {
+  @include centerChild();
   background: $goal-incomplete-background-colour;
   border-radius: 10px;
-  @include centerChild();
   padding: 10px;
   width: 60%;
 }
