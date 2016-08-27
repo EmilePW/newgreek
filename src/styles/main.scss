@@ -1,6 +1,8 @@
+// Reset styles with Eric Meyer's reset
+@import './meyer-reset.scss';
+
 /* Variables, defaults, etc */
 @import './colours.scss';
-@import './meyer-reset.scss';
 @import './mixins.scss';
 @import './typography.scss';
 
